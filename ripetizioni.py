@@ -4,8 +4,6 @@ from datetime import datetime
 import json
 import os
 
-# create executable with pyinstaller ripetizioni.py --onefile --windowed ripetizioni.py
-
 FILE = r'C:\Users\edebi\Documents\programs\lavoro\ripetizioni.json'
 
 # Creiamo una finestra con customtkinter
