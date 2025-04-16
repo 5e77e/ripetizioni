@@ -4,6 +4,8 @@ from datetime import datetime
 import json
 import os
 
+# create executable with pyinstaller ripetizioni.py --onefile --windowed
+
 FILE = r'C:\Users\edebi\Documents\programs\lavoro\ripetizioni.json'
 
 # Creiamo una finestra con customtkinter
@@ -12,7 +14,6 @@ class TableApp(ctk.CTk):
         super().__init__()
 
         self.title("Ripetizioni")
-        self.geometry("850x350")  # Dimensioni della finestra aumentate
 
         # Creiamo una cornice per la tabella
         self.frame = ctk.CTkFrame(self)
@@ -28,7 +29,7 @@ class TableApp(ctk.CTk):
             header_label.grid(row=0, column=c+1, padx=2, pady=5)
 
         # Nomi per la prima colonna
-        self.names = ["Name1", "Name2", "Name3", "Name4", "Totale"]
+        self.names = ["Alice", "Viola", "Mariangela", "Pietro", "Nicolò", "Paulo", "Carolina", "Totale"]
 
         # Numero di righe e colonne
         self.rows = len(self.names)  # Ultima riga è per il totale
@@ -65,7 +66,7 @@ class TableApp(ctk.CTk):
 
             # Colonna "Paga" con valori fissi per le prime tre righe
             if r < self.rows-1:                
-                self.table_values[r][0] = [20, 15, 15, 15, 25, 25][r]  # I valori per "Paga"
+                self.table_values[r][0] = [20, 15, 15, 15, 25, 25, 20][r]  # I valori per "Paga"
                 paga_label = ctk.CTkLabel(self.frame, text=str(self.table_values[r][0]), width=50, height=30)
                 paga_label.grid(row=r+1, column=2, padx=2, pady=5)
             elif r == self.rows-1:
