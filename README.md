@@ -47,4 +47,4 @@ The application uses a JSON file (`ripetizioni.json`) to store all data. If the 
 
 To create a standalone executable, use [PyInstaller](https://pyinstaller.org/):
 ```bash
-   pyinstaller --onefile --windowed [ripetizioni.py](http://_vscodecontentref_/0)
+   pyinstaller ripetizioni.py --onefile --windowed
